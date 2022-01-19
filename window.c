@@ -89,10 +89,10 @@ void font(char letter)
   return;
 }
 
-void render_font(char* msg)
+void render_font(char* msg, unsigned size, struct Colour* colour1, struct Colour* colour2)
 {
   for (unsigned i = 0; i < sizeof msg; i++)
-    render_array(font(msg[i]));
+    render_array(font(msg[i]), size/8, size/8, size, colour1, colour2);
   return;
 }
 
