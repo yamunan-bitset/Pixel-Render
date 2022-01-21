@@ -23,7 +23,7 @@ void render()
   struct Colour colour1 = { .r=1,.g=1,.b=1 };
   struct Colour colour2 = { .r=0,.g=0,.b=0 };
   srand(time(0));
-  render_init(&window);
+  render_init(window);
 
 /*
   for (unsigned w = 0; w < window.width; w+=10)
@@ -34,15 +34,15 @@ void render()
   for (unsigned x = 0; x < window.width; x+=10)
     for (unsigned y = 0; y < window.height; y+=10)
       {
-	if (sprite[y * 5 + x] == 1) pixel(x, y, 10, &colour1);
-	else                        pixel(x, y, 10, &colour2);
+	if (sprite[y * 5 + x] == 1) pixel(x, y, 10, colour1);
+	else                        pixel(x, y, 10, colour2);
       }
 }
 
 int main(int argc, char** argv)
 {
   glutInit(&argc, argv);
-  init(&window);
+  init(window);
   glutDisplayFunc(render);
   glutMainLoop();
   return 0;
