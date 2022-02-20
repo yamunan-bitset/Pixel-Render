@@ -22,7 +22,7 @@ void init(struct Window);
 void render_init(struct Window);
 void pixel(unsigned, unsigned, unsigned, struct Colour);
 void render_array(unsigned*, unsigned, unsigned, struct Colour, struct Colour);
-unsigned* font(char);
-void render_font(char*, unsigned, struct Colour, struct Colour);
+// unsigned* font(char);
+// void render_font(char*, unsigned, struct Colour, struct Colour);
 
 #endif

@@ -29,6 +29,14 @@ void render_array(unsigned* array, unsigned xsize, unsigned ysize, unsigned size
       }
 }
 
+void init(struct Window window)
+{
+  glutInitDisplayMode(GLUT_RGBA | GLUT_SINGLE | GLUT_DEPTH);
+  glutInitWindowSize(window.height, window.width);
+  glutCreateWindow(window.title);
+}
+
+/*
 unsigned* font(char letter)
 {
   switch (letter)
@@ -146,11 +154,5 @@ void render_font(char* msg, unsigned size, struct Colour colour1, struct Colour 
     render_array(font(msg[i]), size/8, size/8, size, colour1, colour2);
   return;
 }
-
-void init(struct Window window)
-{
-  glutInitDisplayMode(GLUT_RGBA | GLUT_SINGLE | GLUT_DEPTH);
-  glutInitWindowSize(window.height, window.width);
-  glutCreateWindow(window.title);
-}
+*/
 
