@@ -2,3 +2,4 @@ a.out
 pixel_render
 *.o
 *~
+__pycache__
